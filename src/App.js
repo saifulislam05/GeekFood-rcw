@@ -1,6 +1,7 @@
 
 
 import Accordian from './Accordian/Accordian';
+import Feedback from './Feedback/Feedback';
 import Header from './Header/Header';
 import Hero from './Hero/Hero';
 
@@ -9,7 +10,8 @@ function App() {
     <>
       <Header />
       <Hero />
-      <Accordian/>
+      <Accordian />
+      <Feedback/>
     </>
   );
 }
