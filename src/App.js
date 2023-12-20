@@ -1,19 +1,18 @@
-
-
-import Accordian from './Accordian/Accordian';
-import Feedback from './Feedback/Feedback';
-import Footer from './Footer/Footer';
-import Header from './Header/Header';
-import Hero from './Hero/Hero';
+import React from "react";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import Home from "./Pages/Home";
+import Quote from "./Pages/Quote";
 
 function App() {
   return (
     <>
-      <Header />
-      <Hero />
-      <Accordian />
-      <Feedback />
-      <Footer/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/quote" element={<Quote />} />
+        </Routes>
+      </BrowserRouter>
+
     </>
   );
 }
