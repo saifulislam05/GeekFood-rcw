@@ -5,10 +5,8 @@ const RestaurantCard = ({ data }) => {
   const { URL, address, name, outcode, postcode, rating, type_of_food } = data;
   const ratingFloor = Math.floor(rating);
 
-  console.log(name,rating);
-
   return (
-    <div className="w-full mx-auto rounded-lg overflow-hidden shadow-md bg-white">
+    <div className="w-full mx-auto rounded-lg overflow-hidden shadow-md bg-white cursor-pointer hover:scale-90 duration-500">
       <div className="px-6 py-4">
         <div className="flex items-center mb-2">
           <h2 className="text-gray-800 font-semibold text-xl">{name}</h2>
@@ -38,7 +36,7 @@ const RestaurantCard = ({ data }) => {
         </p>
         <p className="text-gray-600 text-sm mb-4">{outcode + " " + postcode}</p>
       </div>
-      <div className="px-6 py-4 bg-gray-100">
+      <div className="px-6 py-4 bg-gray-200">
         <div className="mb-2 text-green-500">
           <svg
             stroke="currentColor"
