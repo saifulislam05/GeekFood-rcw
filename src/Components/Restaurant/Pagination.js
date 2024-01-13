@@ -6,8 +6,7 @@ const Pagination = ({ currentPage, totalPages, pageHandler }) => {
   return (
     <ol className="flex justify-center gap-1 text-xs font-medium my-4">
       <li>
-        <a
-          href="#"
+        <span
           className={`inline-flex h-8 w-8 items-center justify-center rounded border border-gray-100 bg-white text-gray-900 ${
             currentPage === 1 && "opacity-50 cursor-not-allowed"
           }`}
@@ -25,13 +24,12 @@ const Pagination = ({ currentPage, totalPages, pageHandler }) => {
               clipRule="evenodd"
             />
           </svg>
-        </a>
+        </span>
       </li>
 
       {maxPages.map((page) => (
         <li key={page}>
-          <a
-            href="#"
+          <span
             className={`block h-8 w-8 rounded border ${
               currentPage === page
                 ? "bg-blue-600 text-white"
@@ -40,13 +38,12 @@ const Pagination = ({ currentPage, totalPages, pageHandler }) => {
             onClick={() => pageHandler(page)}
           >
             {page}
-          </a>
+          </span>
         </li>
       ))}
 
       <li>
-        <a
-          href="#"
+        <span
           className={`inline-flex h-8 w-8 items-center justify-center rounded border border-gray-100 bg-white text-gray-900 ${
             currentPage === totalPages && "opacity-50 cursor-not-allowed"
           }`}
@@ -64,7 +61,7 @@ const Pagination = ({ currentPage, totalPages, pageHandler }) => {
               clipRule="evenodd"
             />
           </svg>
-        </a>
+        </span>
       </li>
     </ol>
   );

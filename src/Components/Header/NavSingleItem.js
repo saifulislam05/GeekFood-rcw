@@ -5,7 +5,6 @@ const NavSingleItem = ({ title }) => {
   const location = useLocation();
   const isActive =
     location.pathname === (title === "Home" ? "/" : `/${title.toLowerCase()}`);
-  console.log(isActive);
   let textColor = isActive ? "text-blue-700" : "text-white";
   return (
     <li>

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import RestaurantList from "../Components/Restaurant/RestaurantList";
-import Header from "../Components/Header/Header";
 import FilterInput from "../Components/Restaurant/FilterInput";
 import RestaurantsData from "../Data/Restaurants.json";
 import Pagination from "../Components/Restaurant/Pagination";
@@ -40,7 +39,6 @@ const Restaurent = () => {
 
   return (
     <>
-      <Header />
       <FilterInput
         searchTerm={searchTerm}
         minRating={minRating}
