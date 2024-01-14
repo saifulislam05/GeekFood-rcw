@@ -1,47 +1,52 @@
 import React from "react";
-import { createBrowserRouter,RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Error from "./Error";
 import Layout from "./Layout";
 import Contact from "./Pages/Contact";
 import Foods from "./Pages/Foods";
 import Home from "./Pages/Home";
 import Quote from "./Pages/Quote";
+import Recipe from "./Pages/Recipe";
 import Restaurent from "./Pages/Restaurant";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    errorElement:<Error/>,
+    errorElement: <Error />,
     children: [
       {
         path: "/",
-        element:<Home/>
+        element: <Home />,
       },
       {
         path: "/quote",
-        element:<Quote/>
+        element: <Quote />,
       },
       {
         path: "/restaurants",
-        element:<Restaurent/>
+        element: <Restaurent />,
       },
       {
         path: "/foods",
-        element:<Foods/>
+        element: <Foods />,
       },
       {
         path: "/contact",
-        element:<Contact/>
+        element: <Contact />,
       },
-    ]
-  }
-])
+      {
+        path: "/foods/recipe/:foodId/:title/:image",
+        element: <Recipe />,
+      },
+    ],
+  },
+]);
 
 function App() {
   return (
     <>
-      <RouterProvider router={router}/>
+      <RouterProvider router={router} />
     </>
   );
 }
